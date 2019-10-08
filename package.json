@@ -1,0 +1,23 @@
+{
+  "name": "bamazondb",
+  "version": "1.0.0",
+  "description": "Bamazondb is an application that displays products, its cost and other related information within a table.",
+  "main": "index.js",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhelms2132/bamazondb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bhelms2132/bamazondb/issues"
+  },
+  "homepage": "https://github.com/Bhelms2132/bamazondb#readme"
+}
