@@ -1,16 +1,15 @@
-//Variables declared
 var mysql = require("mysql");
-var inquirer = require("inquirer");
-var gResults;
-var gAnswer_item;
-var gAnswer_unit;
-var newStock;
 
-//mySQL database connection made
 var connection = mysql.createConnection({
   host: "localhost",
+
+  // Your port; if not 3306
   port: 3306,
+
+  // Your username
   user: "root",
+
+  // Your password
   password: "root.helms",
   database: "bamazondb"
 });
@@ -18,8 +17,18 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
-  connection.end();
+  afterConnection();
 });
+
+function afterConnection() {
+  connection.query("SELECT * FROM bamazondb.products", function(err, res) {
+    if (err) throw err;
+    console.log(res);
+    
+    connection.end();
+  });
+}
+
 
 
 
