@@ -28,17 +28,17 @@ function start() {
   })
   .then(function(answer){
     console.log("ID: " + answer.productId);
-    
+    units();
   });
 }
 // function to handle products to purchase
 function units() {
    inquirer.prompt({
-     name:"units",
+     name:"units_buy",
      type:"input",
      message: "How many units of the product would you like to buy?"
    });
-   
+
    
 }
 
