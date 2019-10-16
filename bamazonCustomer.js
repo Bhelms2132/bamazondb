@@ -28,8 +28,8 @@ function start() {
   })
   .then(function(answer){
     console.log("ID: " + answer.productId);
-    units();
-  });
+   units();
+    });
 }
 // function to handle products to purchase
 function units() {
@@ -37,6 +37,9 @@ function units() {
      name:"units_buy",
      type:"input",
      message: "How many units of the product would you like to buy?"
+   })
+   .then(function(answer_units){
+     console.log("Units: " + answer_units.units_buy);
    });
 
    
